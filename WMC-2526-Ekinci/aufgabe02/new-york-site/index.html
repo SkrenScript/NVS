@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New York – Mini‑Website</title>
+  <meta name="description" content="Kleine Website über New York City: Überblick, Sehenswürdigkeiten, Aktivitäten und Kontakt.">
+  <link id="theme" rel="stylesheet" href="css/theme-light.css">
+  <script>
+    
+    function switchTheme() {
+      const link = document.getElementById('theme');
+      link.href = link.href.includes('theme-light.css')
+        ? 'css/theme-accent.css'
+        : 'css/theme-light.css';
+    }
+  </script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>New York City</h1>
+    <p class="tagline">Die Stadt, die niemals schläft</p>
+  </div>
+</header>
+
+<nav aria-label="Hauptnavigation">
+  <ul class="container">
+    <li><a href="#ueberblick">Überblick</a></li>
+    <li><a href="#tabelle">Top 10 Sehenswürdigkeiten</a></li>
+    <li><a href="#aktivitaeten">Aktivitäten & Events</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><button class="btn small" onclick="switchTheme()" type="button">Theme wechseln</button></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <section id="ueberblick" aria-labelledby="h-ueberblick">
+    <h2 id="h-ueberblick">Überblick</h2>
+    <figure class="hero">
+      <img src="images/skyline.jpg" alt="Blick auf die Skyline von Manhattan bei Sonnenuntergang.">
+      <figcaption>Manhattan Skyline – fülle den <code>images/</code>‑Ordner mit eigenen Bildern.</figcaption>
+    </figure>
+    <p>
+      New York City (NYC) besteht aus fünf Boroughs: Manhattan, Brooklyn, Queens, The Bronx und Staten Island.
+      Die Metropole ist bekannt für ihre kulturelle Vielfalt, ikonische Architektur und eine lebendige Kunst‑ und
+      Gastronomieszene.
+    </p>
+  </section>
+
+  <section id="tabelle" aria-labelledby="h-tabelle">
+    <h2 id="h-tabelle">Top 10 Sehenswürdigkeiten</h2>
+    <p>Beispieltabelle mit <code>caption</code>, <code>thead</code> und <code>tbody</code> (mind. 10 Zeilen):</p>
+    <div class="table-wrap">
+      <table>
+        <caption>New York – ausgewählte Sehenswürdigkeiten</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ort</th>
+            <th scope="col">Borough</th>
+            <th scope="col">Kurzbeschreibung</th>
+            <th scope="col">Kategorie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Freiheitsstatue</td><td>Manhattan</td><td>Weltberühmtes Symbol für Freiheit, erreichbar per Fähre.</td><td>Wahrzeichen</td></tr>
+          <tr><td>2</td><td>Central Park</td><td>Manhattan</td><td>Großer Stadtpark mit Seen, Wiesen und Wegen.</td><td>Parkanlage</td></tr>
+          <tr><td>3</td><td>Times Square</td><td>Manhattan</td><td>Leuchtreklamen, Broadway‑Theater, Menschenmengen.</td><td>Platz</td></tr>
+          <tr><td>4</td><td>Brooklyn Bridge</td><td>Brooklyn/Manhattan</td><td>Historische Hängebrücke mit Skyline‑Blick.</td><td>Architektur</td></tr>
+          <tr><td>5</td><td>Empire State Building</td><td>Manhattan</td><td>Art‑Déco‑Wolkenkratzer mit Aussichtsplattform.</td><td>Aussicht</td></tr>
+          <tr><td>6</td><td>Museum of Modern Art (MoMA)</td><td>Manhattan</td><td>Moderne und zeitgenössische Kunst.</td><td>Museum</td></tr>
+          <tr><td>7</td><td>Metropolitan Museum of Art</td><td>Manhattan</td><td>Eines der größten Kunstmuseen der Welt.</td><td>Museum</td></tr>
+          <tr><td>8</td><td>High Line</td><td>Manhattan</td><td>Umgestaltete Güterzugtrasse als Park in der Höhe.</td><td>Parkanlage</td></tr>
+          <tr><td>9</td><td>Grand Central Terminal</td><td>Manhattan</td><td>Historischer Bahnhof mit ikonischer Sternendecke.</td><td>Architektur</td></tr>
+          <tr><td>10</td><td>Coney Island Boardwalk</td><td>Brooklyn</td><td>Strand, Vergnügungspark und Promenade.</td><td>Freizeit</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="aktivitaeten" aria-labelledby="h-aktiv">
+    <h2 id="h-aktiv">Aktivitäten & Events</h2>
+    <div class="grid">
+      <article>
+        <h3>Street‑Food‑Tour</h3>
+        <p>Entdecke Foodtrucks und kleine Imbisse in Queens und Brooklyn.</p>
+      </article>
+      <article>
+        <h3>Museumsnacht</h3>
+        <p>Viele Häuser bieten verlängerte Öffnungszeiten und spezielle Führungen.</p>
+      </article>
+      <article>
+        <h3>Harlem Jazz</h3>
+        <p>Live‑Musik in Clubs mit viel Geschichte und Atmosphäre.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="kontakt" aria-labelledby="h-kontakt">
+    <h2 id="h-kontakt">Kontakt & Planungsformular</h2>
+    <p>Ein einfaches Formular (Pflichtfelder sind markiert):</p>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Reiseanfrage</legend>
+        <div class="form-row">
+          <label for="name">Name* </label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="email">E‑Mail* </label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="bezirk">Bevorzugter Borough</label>
+          <select id="bezirk" name="bezirk">
+            <option>Manhattan</option>
+            <option>Brooklyn</option>
+            <option>Queens</option>
+            <option>The Bronx</option>
+            <option>Staten Island</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="datum">Reisedatum</label>
+          <input id="datum" name="datum" type="date">
+        </div>
+        <div class="form-row">
+          <span>Interessen</span>
+          <label><input type="checkbox" name="interessen" value="kunst"> Kunst</label>
+          <label><input type="checkbox" name="interessen" value="essen"> Essen</label>
+          <label><input type="checkbox" name="interessen" value="architektur"> Architektur</label>
+          <label><input type="checkbox" name="interessen" value="parks"> Parks</label>
+        </div>
+        <div class="form-row">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="nachricht" rows="4" placeholder="Was möchtest du in NYC sehen?"></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn" type="submit">Abschicken</button>
+          <button class="btn ghost" type="reset">Zurücksetzen</button>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+</main>
+
+<aside class="container" aria-labelledby="h-aside">
+  <h2 id="h-aside">KI‑Nutzung & Erfahrungen (Dokumentation)</h2>
+  <p><strong>Hinweis:</strong> Diese Website wurde mit Unterstützung von KI erstellt. Bitte markiere hier, was du selbst angepasst hast.</p>
+  <ul class="checklist">
+    <li>[ ] Inhalte über NYC ergänzt/geändert</li>
+    <li>[ ] Eigene Bilder in <code>/images</code> hinzugefügt und Alt‑Texte geprüft</li>
+    <li>[ ] Farben/Typografie in den CSS‑Dateien angepasst</li>
+    <li>[ ] Tabelle überarbeitet / Quellen ergänzt</li>
+    <li>[ ] Erfahrungen beim Arbeiten mit KI (Was war unklar? Was würdest du anders machen?)</li>
+  </ul>
+</aside>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 – Mini‑Projekt „New York“ · Erstellt für eine Schulübung (ohne Frameworks).</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b7280;
+  --primary: #1f6feb;
+  --primary-contrast: #ffffff;
+  --surface: #f6f7f9;
+  --border: #e5e7eb;
+  --stripe: #fafafa;
+  --heading-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --body-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--text);
+  font-family:var(--body-font); line-height:1.6;
+}
+.container{max-width:980px; margin:0 auto; padding:0 1rem}
+header{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  text-align:center; padding:2rem 0 1.25rem;
+}
+header h1{margin:0 0 .25rem; font-size:2rem}
+.tagline{margin:0; color:var(--muted)}
+
+nav{background:var(--surface); border-bottom:1px solid var(--border)}
+nav ul{
+  list-style:none; margin:0; padding:.5rem 0;
+  display:flex; gap:1rem; flex-wrap:wrap;
+}
+nav a{
+  display:inline-block; padding:.5rem .75rem; border-radius:.4rem;
+  text-decoration:none; color:var(--text); border:1px solid transparent;
+}
+nav a:hover{border-color:var(--border); background:#fff}
+
+.btn{
+  display:inline-block; padding:.6rem .9rem; border-radius:.5rem;
+  border:1px solid var(--primary); background:var(--primary);
+  color:var(--primary-contrast); cursor:pointer;
+}
+.btn.ghost{background:transparent; color:var(--primary)}
+.btn.small{padding:.35rem .6rem; font-size:.9rem}
+
+
+main{padding:2rem 0}
+h2{margin-top:.5rem}
+.hero{
+  margin:0; border:1px solid var(--border); border-radius:.6rem;
+  background:#fff; overflow:hidden;
+}
+.hero img{display:block; width:100%; height:auto}
+.hero figcaption{
+  font-size:.9rem; color:var(--muted);
+  padding:.5rem .75rem; background:var(--surface); border-top:1px solid var(--border);
+}
+
+
+.grid{display:flex; gap:1rem; flex-wrap:wrap}
+.grid article{
+  flex:1 1 30%; border:1px solid var(--border);
+  background:#fff; border-radius:.6rem; padding:1rem;
+}
+
+.table-wrap{overflow:auto; border:1px solid var(--border); border-radius:.6rem; background:#fff}
+table{width:100%; border-collapse:collapse}
+caption{caption-side:top; text-align:left; font-weight:600; padding:1rem}
+thead th{
+  background:var(--surface); border-bottom:2px solid var(--border);
+  text-align:left; padding:.75rem;
+}
+tbody td{padding:.65rem .75rem; border-top:1px solid var(--border)}
+tbody tr:nth-child(even){background:var(--stripe)}
+
+
+form fieldset{
+  border:1px solid var(--border); border-radius:.6rem;
+  padding:1rem; background:#fff;
+}
+form legend{font-weight:600}
+.form-row{display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; margin:.6rem 0}
+label{min-width:160px}
+input[type="text"], input[type="email"], input[type="date"], select, textarea{
+  border:1px solid var(--border); border-radius:.4rem;
+  padding:.5rem .6rem; background:var(--surface);
+}
+input:focus, select:focus, textarea:focus{
+  outline:3px solid rgba(31,111,235,.2); border-color:var(--primary);
+}
+
+
+aside{border-top:1px dashed var(--border); padding:1.5rem 0; margin-top:1rem}
+footer{
+  margin-top:2rem; border-top:1px solid var(--border);
+  padding:1rem 0; color:var(--muted); text-align:center;
+}

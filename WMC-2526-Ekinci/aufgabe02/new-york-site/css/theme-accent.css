@@ -1,0 +1,110 @@
+
+
+:root{
+  --bg: #0f1020;
+  --text: #f5f7ff;
+  --muted: #b6b9d6;
+  --primary: #ff3d71;
+  --primary-contrast: #120816;
+  --surface: #191a2e;
+  --border: #2a2c4a;
+  --stripe: #141529;
+  --heading-font: Georgia, "Times New Roman", Times, serif;
+  --body-font: "Trebuchet MS", Verdana, Tahoma, sans-serif;
+}
+
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--text);
+  font-family:var(--body-font); line-height:1.65;
+}
+.container{max-width:1000px; margin:0 auto; padding:0 1rem}
+
+
+header{
+  background:var(--surface);
+  border-bottom:3px solid var(--primary);
+  text-align:center; padding:2rem 0 1.25rem;
+}
+header h1{
+  margin:0 0 .3rem; font-size:2.2rem; font-family:var(--heading-font);
+}
+.tagline{margin:0; color:var(--muted)}
+
+nav{
+  background:#14152a; border-bottom:1px solid var(--border);
+}
+nav ul{
+  list-style:none; margin:0; padding:.6rem 0;
+  display:flex; gap:1rem; align-items:center; flex-wrap:wrap;
+}
+nav a{
+  display:inline-block; padding:.5rem .8rem; border-radius:.4rem;
+  text-decoration:none; color:var(--text); background:#1b1d36;
+}
+nav a:hover{background:#22244a}
+
+.btn{
+  display:inline-block; padding:.6rem 1rem; border-radius:.5rem;
+  border:2px solid var(--primary); background:var(--primary);
+  color:var(--primary-contrast); cursor:pointer; font-weight:700;
+}
+.btn.ghost{background:transparent; color:var(--primary)}
+
+
+main{padding:2rem 0}
+h2{font-family:var(--heading-font); margin-top:0}
+.hero{
+  margin:0; border:2px solid var(--primary); border-radius:.6rem;
+  overflow:hidden; background:#0f1020;
+}
+.hero img{display:block; width:100%; height:auto}
+.hero figcaption{
+  padding:.6rem .75rem; background:#14152a; color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+
+.grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+}
+.grid article{
+  background:#171838; border:1px solid var(--border); border-radius:.6rem; padding:1rem;
+}
+@media (max-width:900px){ .grid{grid-template-columns:1fr} } 
+
+
+.table-wrap{
+  overflow:auto; border:1px solid var(--primary); border-radius:.6rem; background:#13142a;
+}
+table{width:100%; border-collapse:separate; border-spacing:0}
+caption{
+  caption-side:top; text-align:left; font-weight:800; padding:1rem; color:#ffd1de;
+}
+thead th{
+  background:#2a2c4a; color:#ffffff; border-bottom:2px solid var(--primary);
+  text-align:left; padding:.75rem;
+}
+tbody td{padding:.65rem .75rem; border-top:1px solid var(--border)}
+tbody tr:nth-child(even){background:var(--stripe)}
+
+
+form fieldset{
+  border:2px solid var(--primary); border-radius:.6rem; padding:1rem; background:#13142a;
+}
+form legend{font-weight:800; color:#ffd1de; padding:0 .25rem}
+.form-row{display:flex; gap:.8rem; align-items:center; flex-wrap:wrap; margin:.7rem 0}
+label{min-width:180px}
+input[type="text"], input[type="email"], input[type="date"], select, textarea{
+  border:1px solid var(--border); border-radius:.4rem; padding:.55rem .65rem;
+  background:#0f1020; color:var(--text);
+}
+input:focus, select:focus, textarea:focus{
+  outline:3px solid rgba(255,61,113,.25); border-color:var(--primary);
+}
+
+/* Aside & Footer */
+aside{border-top:2px dashed var(--border); padding:1.5rem 0; margin-top:1rem}
+footer{margin-top:2rem; border-top:2px solid var(--primary); padding:1rem 0; color:var(--muted); text-align:center}
