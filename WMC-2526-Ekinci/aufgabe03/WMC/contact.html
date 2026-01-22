@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - WebProjekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">WebProjekt</div>
+        <div class="header-actions">
+            <button id="theme-toggle">Theme</button>
+            <button class="burger-menu">☰</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout-grid">
+        <main>
+            <h1>Kontakt</h1>
+            <article class="card fade-in">
+                <h2>Schreiben Sie uns eine Nachricht</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Vollständiger Name</label>
+                        <input type="text" id="name" name="name" placeholder="Erika Mustermann" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail Adresse</label>
+                        <input type="email" id="email" name="email" placeholder="beispiel@web.de" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ihre Nachricht</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Wie können wir Ihnen helfen?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Nachricht senden</button>
+                </form>
+            </article>
+        </main>
+
+        <aside>
+            <div class="aside-box">
+                <h3>Anschrift</h3>
+                <p>Musterweg 123<br>12345 Musterstadt<br>Deutschland</p>
+            </div>
+            <div class="aside-box">
+                <h3>Support</h3>
+                <p>Mo-Fr: 08:00 - 18:00 Uhr</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WebProjekt - Credits: Toprak Ekinci</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite - WebProjekt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">WebProjekt</div>
+        <div class="header-actions">
+            <button id="theme-toggle">Theme</button>
+            <button class="burger-menu">☰</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout-grid">
+        <main>
+            <h1>Willkommen</h1>
+            
+            <article class="card fade-in">
+                <h2>Einführung</h2>
+                <div class="video-container" style="padding-bottom: 60%; margin-bottom: 20px;">
+                    <iframe src="https://enzostudios.xyz/" title="Website Vorschau 1" frameborder="0"></iframe>
+                </div>
+                <div class="video-container" style="padding-bottom: 60%;">
+                    <iframe src="https://weavework.pages.dev" title="Website Vorschau 2" frameborder="0"></iframe>
+                </div>
+                <p>Frameworks wie react und next js.</p>
+                <p><small>PS: Diese Website wurde nur mit HTML, CSS und Javascript programmiert.</small></p>
+                <a href="about.html" class="btn">Mehr erfahren</a>
+            </article>
+
+            <article class="card fade-in">
+                <h2>Multimedia</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/wRNinF7YQqQ&pp=ygUMY3NzIHR1dG9yaWFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </article>
+        </main>
+
+        <aside>
+            <div class="aside-box">
+                <h3>Informationen</h3>
+                <p>Diese Webseite speichert Ihre Theme-Einstellungen lokal im Browser.</p>
+                <ul>
+                    <li>CSS Grid Layout</li>
+                    <li>LocalStorage Support</li>
+                    <li>Dark/Light Mode</li>
+                </ul>
+            </div>
+            <div class="aside-box">
+                <h3>Updates</h3>
+                <p>Neue Inhalte werden regelmäßig hinzugefügt.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WebProjekt - Credits: Toprak Ekinci</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
