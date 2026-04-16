@@ -1,11 +1,11 @@
-import persons from "./persons.json" with { type: "json" };
+import personen from "./persons.json" with { type: "json" };
 
-function renderPersons() {
-    const tbody = document.querySelector("#tbody");
-    tbody.innerHTML = "";
-    for (const person of persons) {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
+function anzeigen() {
+    const tabelle = document.querySelector("#tbody");
+    tabelle.innerHTML = "";
+    for (const person of personen) {
+        const zeile = document.createElement("tr");
+        zeile.innerHTML = `
             <td>${person.id}</td>
             <td>${person.name}</td>
             <td>${person.groesse}</td>
@@ -13,19 +13,19 @@ function renderPersons() {
             <td>${person.herkunft}</td>
             <td>${person.gewicht}</td>
         `;
-        tbody.appendChild(tr);
+        tabelle.appendChild(zeile);
     }
 }
 
-let sortAsc = true;
+let aufsteigend = true;
 document.querySelector("#height").addEventListener("click", () => {
-    if (sortAsc) {
-        persons.sort((a, b) => a.groesse - b.groesse);
+    if (aufsteigend) {
+        personen.sort((a, b) => a.groesse - b.groesse);
     } else {
-        persons.sort((a, b) => b.groesse - a.groesse);
+        personen.sort((a, b) => b.groesse - a.groesse);
     }
-    sortAsc = !sortAsc;
-    renderPersons();
+    aufsteigend = !aufsteigend;
+    anzeigen();
 });
 
-renderPersons();
+anzeigen();

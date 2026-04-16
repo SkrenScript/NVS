@@ -1,4 +1,4 @@
-const students = [
+const schueler = [
   { name: "Anna", age: 17, grade: 2 },
   { name: "Ben", age: 16, grade: 4 },
   { name: "Clara", age: 18, grade: 1 },
@@ -9,20 +9,20 @@ const students = [
   { name: "Hugo", age: 18, grade: 4 },
 ];
 
-const passed = students.filter(s => s.grade <= 4);
-console.log("passed:", passed);
+const bestanden = schueler.filter(s => s.grade <= 4);
+console.log("bestanden:", bestanden);
 
-const labels = students.map(s => `${s.name} (${s.age})`);
-console.log("labels:", labels);
+const texte = schueler.map(s => `${s.name} (${s.age})`);
+console.log("texte:", texte);
 
-const passedNames = students.filter(s => s.grade <= 4).map(s => s.name);
-console.log("passedNames:", passedNames);
+const namen = schueler.filter(s => s.grade <= 4).map(s => s.name);
+console.log("namen:", namen);
 
-const averageGrade = students.reduce((sum, s) => sum + s.grade, 0) / students.length;
-console.log("averageGrade:", averageGrade);
+const schnitt = schueler.reduce((summe, s) => summe + s.grade, 0) / schueler.length;
+console.log("schnitt:", schnitt);
 
-const result = students
+const ausgabe = schueler
   .filter(s => s.age >= 17 && s.grade <= 4)
   .map(s => s.name)
   .join(", ");
-console.log("bonus:", result);
+console.log("bonus:", ausgabe);
