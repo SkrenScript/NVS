@@ -1,6 +1,5 @@
 import persons from "./persons.json" with { type: "json" };
 
-// tabelle befüllen
 function renderPersons() {
     const tbody = document.querySelector("#tbody");
     tbody.innerHTML = "";
@@ -18,7 +17,6 @@ function renderPersons() {
     }
 }
 
-// bei klick auf height sortieren
 let sortAsc = true;
 document.querySelector("#height").addEventListener("click", () => {
     if (sortAsc) {
@@ -30,5 +28,4 @@ document.querySelector("#height").addEventListener("click", () => {
     renderPersons();
 });
 
-// beim laden anzeigen
 renderPersons();

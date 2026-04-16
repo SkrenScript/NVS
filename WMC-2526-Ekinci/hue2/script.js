@@ -1,4 +1,3 @@
-// stufe 1: einfaches promise mit setTimeout
 function holeBrief(inhalt) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -7,7 +6,6 @@ function holeBrief(inhalt) {
     });
 }
 
-// stufe 2: stempeln
 function stempelBrief(brief) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -16,7 +14,6 @@ function stempelBrief(brief) {
     });
 }
 
-// versenden
 function versendeBrief(brief) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -25,7 +22,6 @@ function versendeBrief(brief) {
     });
 }
 
-// chaining mit .then()
 holeBrief("Hallo Welt")
     .then(brief => {
         console.log("Brief geholt:", brief);
